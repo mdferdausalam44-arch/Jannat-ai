@@ -36,3 +36,12 @@ chaquopy {
 dependencies {
     implementation("androidx.appcompat:appcompat:1.7.1")
 }
+
+configurations.configureEach {
+    resolutionStrategy.eachDependency {
+        if (requested.group == "org.jetbrains.kotlin" &&
+            requested.name.startsWith("kotlin-stdlib")) {
+            useVersion("1.8.22")
+        }
+    }
+}
