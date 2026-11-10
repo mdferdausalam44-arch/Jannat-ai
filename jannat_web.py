@@ -180,12 +180,12 @@ def get_firebase_session():
 
 @app.route("/")
 def home():
-    return send_from_directory(os.path.expanduser("~/JannatAI"), "index.html")
+    return send_from_directory(os.path.expanduser("~/Jannat-ai-github"), "index.html")
 
 
 @app.route("/static/<path:filename>")
 def new_static_files(filename):
-    return send_from_directory(os.path.expanduser("~/JannatAI/static"), filename)
+    return send_from_directory(os.path.expanduser("~/Jannat-ai-github/static"), filename)
 
 
 @app.route("/api/chat", methods=["POST"])
@@ -268,5 +268,5 @@ if __name__ == "__main__":
         print("GEMINI_API_KEY পাওয়া যায়নি। আগে সেট করো।")
     else:
         print("Jannat interface চালু হচ্ছে…")
-        print("ফোনের Chrome-এ http://127.0.0.1:5000 খোলো।")
-        app.run(host="127.0.0.1", port=5000, debug=False)
+        print("ফোনের Chrome-এ http://127.0.0.1:5001 খোলো।")
+        app.run(host="127.0.0.1", port=5001, debug=False)

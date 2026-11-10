@@ -1,1 +1,4 @@
-plugins { id("com.android.application") } android { ndk { abiFilters.addAll(listOf("armeabi-v7a", "arm64-v8a", "x86", "x86_64")) } }
+plugins {
+    id("com.android.application") version "8.13.2" apply false
+    id("com.chaquo.python") version "17.2.0" apply false
+}
