@@ -58,7 +58,7 @@ public class MainActivity extends Activity {
         });
 
         setContentView(webView);
-        webView.loadUrl("file:///android_asset/index.html");
+        webView.loadUrl("http://127.0.0.1:5001/");
     }
 
     @Override
