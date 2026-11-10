@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JANNAT AI</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #05090e;
+  color: white;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 20px;
+  background: radial-gradient(
+    circle at 50% 45%,
+    #102d35 0%,
+    #07121a 40%,
+    #05090e 75%
+  );
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #55f5e5;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.status {
+  color: #61e9d6;
+  font-size: 12px;
+}
+
+.welcome {
+  margin-top: 55px;
+  text-align: center;
+}
+
+.welcome h2 {
+  font-size: 27px;
+  letter-spacing: 2px;
+}
+
+.welcome p {
+  margin-top: 12px;
+  color: #9bbbc2;
+  font-size: 14px;
+}
+
+.core {
+  width: 230px;
+  height: 230px;
+  margin-top: 65px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(
+    circle,
+    #1b777d,
+    #103b4a 50%,
+    #07151f 75%
+  );
+  border: 2px solid #48e7db;
+  box-shadow:
+    0 0 25px #16cbbd,
+    0 0 65px #087d8b,
+    inset 0 0 35px #43e7db;
+  animation: pulse 3s infinite ease-in-out;
+}
+
+.core-inner {
+  width: 155px;
+  height: 155px;
+  border-radius: 50%;
+  border: 2px solid #8cfff5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 25px #50f5e5;
+  color: white;
+  font-size: 29px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 25px #16cbbd,
+                0 0 65px #087d8b;
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px #16cbbd,
+                0 0 90px #087d8b;
+  }
+}
+
+.message {
+  margin-top: 45px;
+  color: #b2d3d8;
+  font-size: 15px;
+  text-align: center;
+}
+
+.mic {
+  width: 75px;
+  height: 75px;
+  margin-top: 15px;
+  border-radius: 50%;
+  border: 2px solid #4de9db;
+  background: #102d35;
+  color: #65fff0;
+  font-size: 30px;
+  box-shadow: 0 0 25px #16bcb2;
+}
+
+.mic:active {
+  transform: scale(0.92);
+}
+
+.footer {
+  margin-top: auto;
+  padding-top: 35px;
+  color: #52757d;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+  <div class="header">
+    <div class="logo">JANNAT AI</div>
+    <div class="status">● ONLINE</div>
+  </div>
+
+  <div class="welcome">
+    <h2>HELLO, I'M JANNAT</h2>
+    <p>তোমার AI সঙ্গী, সবসময় তোমার পাশে।</p>
+  </div>
+
+  <div class="core">
+    <div class="core-inner">JANNAT</div>
+  </div>
+
+  <button class="mic">🎙</button>
+
+  <div class="message">
+    তোমার কথা শুনতে প্রস্তুত আছি ❤️
+  </div>
+
+  <div class="footer">
+    YOUR PERSONAL AI ASSISTANT
+  </div>
+
+</div>
+
+<script src="static/js/app.js"></script>
+</body>
+</html>
