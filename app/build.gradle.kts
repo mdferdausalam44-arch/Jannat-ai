@@ -16,17 +16,20 @@ android {
             abiFilters += listOf("arm64-v8a", "x86_64")
         }
 
-        python {
-            version = "3.13"
-            pip {
-                install("flask")
-            }
-        }
     }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
+    }
+}
+
+chaquopy {
+    defaultConfig {
+        version = "3.13"
+        pip {
+            install("flask")
+        }
     }
 }
 
