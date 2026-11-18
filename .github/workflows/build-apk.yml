@@ -27,11 +27,10 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v4
         with:
-          accept-android-sdk-licenses: true
-          log-accepted-android-sdk-licenses: false
-          packages: |
-            platforms;android-36
-            build-tools;36.0.0
+          packages: ''
+
+      - name: Install Android SDK packages
+        run: sdkmanager --install "platforms;android-36" "build-tools;36.0.0"
 
       - name: Build APK
         run: ./gradlew --no-daemon assembleDebug
